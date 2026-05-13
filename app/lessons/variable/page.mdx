@@ -1,0 +1,25 @@
+import MonacoEditorClient from "../../../components/MonacoEditorClient";
+
+<article className="mdx-content">
+
+# Variables
+
+Variables are used to store data that can be used later in the program.
+
+```js
+// Using var
+var name = "Alice";
+console.log(name); // Output: Alice
+
+// Using let
+let age = 30;
+console.log(age); // Output: 30
+
+// Using const
+const pi = 3.14;
+console.log(pi); // Output: 3.14
+```
+
+<MonacoEditorClient value={`let x = 10, y = 20, z = 30;\nconsole.log(x, y, z);`} />
+
+</article>
