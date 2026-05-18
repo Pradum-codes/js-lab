@@ -6,6 +6,7 @@ export default function MonacoEditorClient({
   value = "// Start typing...",
   language = "javascript",
   height = 320,
+  onChange,
 }) {
   return (
     <div style={{ height, border: "1px solid #dcdcdc", borderRadius: 12, overflow: "hidden" }}>
@@ -14,7 +15,8 @@ export default function MonacoEditorClient({
       </div>
       <Editor
         defaultLanguage={language}
-        defaultValue={value}
+        value={value}
+        onChange={(nextValue) => onChange?.(nextValue ?? "")}
         theme="vs-dark"
         options={{
           automaticLayout: true,
